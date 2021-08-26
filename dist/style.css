@@ -8,21 +8,13 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Main styles */
 .content {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-/* Header styles */
-.page-header {
-    color: #ffffff;
-    background-color: rgb(41, 144, 228);
-    padding: 20px;
-    display: flex;
-}
-
-/* Main styles */
 .page-main {
     flex-grow: 1;
 }
@@ -35,36 +27,6 @@ body {
 
 .column {
     flex:1;
-}
-
-.item {
-    padding: 20px 30px;
-    font-weight: normal;
-    font-size: 17px;
-}
-
-.item:hover {
-    cursor: pointer;
-    background-color: rgb(212, 212, 212);
-}
-
-.task {
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid rgb(233, 233, 233);
-}
-
-.task:hover {
-    cursor: pointer;
-    background-color: rgb(232, 246, 255);
-}
-
-.side-bar {
-
-}
-
-.list {
-
 }
 
 #left {
@@ -81,7 +43,40 @@ body {
     background-color: rgb(233, 233, 233);
 }
 
-/* Create new tasks, projects, notes */
+/* Header styles */
+.page-header {
+    color: #ffffff;
+    background-color: rgb(41, 144, 228);
+    padding: 20px;
+    display: flex;
+}
+
+/* Left column styles */
+.item {
+    padding: 20px 30px;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: rgb(212, 212, 212);
+}
+
+
+/* Middle column styles */
+.task {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.task:hover {
+    cursor: pointer;
+    background-color: rgb(232, 246, 255);
+}
+
+/* Right column styles*/
 form {
     height: 100%;
     padding:0 1px;
