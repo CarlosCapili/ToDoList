@@ -59,8 +59,12 @@ body {
 
 .task {
     padding: 20px;
-    margin: 10px 20px;
-    background-color: rgb(203, 236, 255);
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.task:hover {
+    background-color: rgb(232, 246, 255);
 }
 
 .side-bar {
@@ -68,8 +72,7 @@ body {
 }
 
 .list {
-    margin: 20px auto;
-    max-width: 1440px;
+
 }
 
 #left {
@@ -77,11 +80,14 @@ body {
     max-width: 225px;
 }
 
-
-#right {
+#middle {
     background-color: #ffffff;
+    max-width: 500px;
 }
 
+#right {
+    background-color: rgb(233, 233, 233);
+}
 /* Footer styles */
 .page-footer {
     background-color: rgb(174, 194, 211);
