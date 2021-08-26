@@ -22,15 +22,6 @@ body {
     display: flex;
 }
 
-#add {
-    margin-left: auto;
-}
-
-#add:hover {
-    cursor: pointer;
-    color:#ffba26
-}
-
 /* Main styles */
 .page-main {
     flex-grow: 1;
@@ -64,6 +55,7 @@ body {
 }
 
 .task:hover {
+    cursor: pointer;
     background-color: rgb(232, 246, 255);
 }
 
@@ -82,11 +74,75 @@ body {
 
 #middle {
     background-color: #ffffff;
-    max-width: 500px;
+    max-width: 750px;
 }
 
 #right {
     background-color: rgb(233, 233, 233);
+}
+
+/* Create new tasks, projects, notes */
+form {
+    height: 100%;
+    padding:0 1px;
+}
+
+form > * {
+    padding: 10px;
+}
+
+form > div {
+    width: 100%;
+    background-color: #ffffff;
+    margin-bottom: 1px;
+}
+
+form > div > p {
+    display: inline;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+form > button {
+    width: 100%;
+    border: none;
+    background-color: rgb(233, 233, 233);
+}
+
+form > button:hover {
+    cursor: pointer;
+    background-color: rgb(212, 212, 212);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input, textarea {
+    border: none;
+}
+
+input[type="date"] {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.create-task {
+    display: flex;
+    flex-direction: column;
+}
+
+#title{
+    width: 100%;
+    margin-bottom: 1px;
+    font-size: 15px;
+}
+
+#description {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    overflow-y: auto;
+    resize: none;
+    flex-grow: 1;
 }
 /* Footer styles */
 .page-footer {

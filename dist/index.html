@@ -13,25 +13,34 @@
     <div class="content">
         <header class="page-header">
             <h2>TO-DO</h2>
-            <h2 id="add">ADD</h2>
         </header>
         <div class="page-main">
             <div class="row">
                 <div id="left" class="column">
                     <div class="side-bar">
-                        <h3 class="item">Tasks</h3>
-                        <h3 class="item">Projects</h3>
-                        <h3 class="item">Notes</h3>
+                        <h3 id="task" class="item">Tasks</h3>
+                        <h3 id="projects" class="item">Projects</h3>
+                        <h3 id="notes" class="item">Notes</h3>
                     </div>  
                 </div>
                 <div id="middle" class="column">
                     <div class="list">
-                        <div class="task">task 1</div>
+                        <div class="task">
+                            task 1
+                        </div>
                         <div class="task">task 2</div>
                     </div>
                 </div>
                 <div id="right" class="column">
-                    
+                    <form class="create-task">
+                        <div>
+                            <p>Due Date:</p>
+                            <input type="date">
+                        </div>
+                        <input type="text" id="title" placeholder="Title" required>
+                        <textarea id="description" placeholder="Description"></textarea>
+                        <button>Create Task</button>
+                    </form>
                 </div>
             </div>
         </div>
