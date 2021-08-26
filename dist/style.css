@@ -19,6 +19,16 @@ body {
     color: #ffffff;
     background-color: rgb(41, 144, 228);
     padding: 20px;
+    display: flex;
+}
+
+#add {
+    margin-left: auto;
+}
+
+#add:hover {
+    cursor: pointer;
+    color:#ffba26
 }
 
 /* Main styles */
@@ -37,8 +47,9 @@ body {
 }
 
 .item {
-    padding: 20px;
+    padding: 20px 30px;
     font-weight: normal;
+    font-size: 17px;
 }
 
 .item:hover {
@@ -46,17 +57,24 @@ body {
     background-color: rgb(212, 212, 212);
 }
 
+.task {
+    padding: 20px;
+    margin: 10px 20px;
+    background-color: rgb(203, 236, 255);
+}
+
 .side-bar {
 
 }
 
-.list-items {
-   
+.list {
+    margin: 20px auto;
+    max-width: 1440px;
 }
 
 #left {
     background-color: rgb(233, 233, 233);
-    max-width: 250px;
+    max-width: 225px;
 }
 
 
