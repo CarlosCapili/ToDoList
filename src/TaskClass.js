@@ -1,9 +1,10 @@
 export default class Task {
-    constructor(title, desc, priority, dueDate = "No date") {
+    constructor(title, desc, dueDate = "No date") {
         this.title = title;
         this.desc = desc;
-        this.priority = priority;
         this.dueDate = dueDate;
+
+        console.log(title);
     }
 
     getTitle() {
@@ -20,18 +21,10 @@ export default class Task {
         this.dueDate = newDueDate;
     }
 
-    getPriority() {
-        return this.priority;
-    }
-    setPriority(newPriority) {
-        this.priority = newPriority;
-    }
-
     getDesc() {
         return this.desc;
     }
     setDesc(newDesc) {
         this.desc = newDesc;
     }
-
 }

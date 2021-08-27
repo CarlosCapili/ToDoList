@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/TaskClass.js":
+/*!**************************!*\
+  !*** ./src/TaskClass.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Task)\n/* harmony export */ });\nclass Task {\n    constructor(title, desc, dueDate = \"No date\") {\n        this.title = title;\n        this.desc = desc;\n        this.dueDate = dueDate;\n\n        console.log(title);\n    }\n\n    getTitle() {\n        return this.title;\n    }\n    setTitle(newTitle) {\n        this.title = newTitle;\n    }\n\n    getDueDate() {\n        return this.dueDate;\n    }\n    setDueDate(newDueDate) {\n        this.dueDate = newDueDate;\n    }\n\n    getDesc() {\n        return this.desc;\n    }\n    setDesc(newDesc) {\n        this.desc = newDesc;\n    }\n}\n\n//# sourceURL=webpack://todolist/./src/TaskClass.js?");
+
+/***/ }),
+
 /***/ "./src/createNewTask.js":
 /*!******************************!*\
   !*** ./src/createNewTask.js ***!
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createNewTask\": () => (/* binding */ createNewTask),\n/* harmony export */   \"loadNewTask\": () => (/* binding */ loadNewTask)\n/* harmony export */ });\nfunction createNewTask(title, desc, dueDate) {\n    const task = document.createElement(\"div\");\n\n    console.log(\"MADE IT HERE!\");\n\n    return task;\n}\n\nfunction loadNewTask() {\n    const list = document.querySelector(\".list\");\n    list.append(createNewTask());\n}\n\n//# sourceURL=webpack://todolist/./src/createNewTask.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ createNewTask)\n/* harmony export */ });\nfunction createNewTask(title, desc, dueDate) {\n    const task = document.createElement(\"div\");\n    task.classList.add(\"task\");\n    task.textContent = title;\n\n    const list = document.querySelector(\".list\");\n    list.appendChild(task);\n}\n\n\n//# sourceURL=webpack://todolist/./src/createNewTask.js?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createNewTask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createNewTask */ \"./src/createNewTask.js\");\n\n\n//Use a module later!!!\n\nconst saveBtn = document.querySelector(\"#save\");\nsaveBtn.addEventListener(\"click\", collectFormData);\n\n\n//Add priority level!!\nfunction collectFormData() {\n    let title = document.querySelector(\"#title\");\n    let desc = document.querySelector(\"#description\");\n    let dueDate = document.querySelector(\"#date\").value;\n\n    (0,_createNewTask__WEBPACK_IMPORTED_MODULE_0__.createNewTask)(title, desc, dueDate);\n}\n\n//# sourceURL=webpack://todolist/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _createNewTask__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./createNewTask */ \"./src/createNewTask.js\");\n/* harmony import */ var _TaskClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TaskClass */ \"./src/TaskClass.js\");\n\n\n\nlet taskArr = [];\n\n//Use a module later!!!\nconst saveBtn = document.querySelector(\"#save\");\nsaveBtn.addEventListener(\"click\", (e) => {\n    // e.preventDefault();\n    const isEmpty = document.querySelector(\"#title\").value;\n    const title = document.querySelector(\"#title\").required = true;\n    if (isEmpty !== \"\" && isEmpty.trim() !== \"\") {\n        collectFormData();\n    }\n  \n});\n\n\nfunction collectFormData() {\n    let title = document.querySelector(\"#title\").value;\n    let desc = document.querySelector(\"#description\").value;\n    let dueDate = document.querySelector(\"#date\").value;\n\n    //For DOM\n    (0,_createNewTask__WEBPACK_IMPORTED_MODULE_0__.default)(title, desc, dueDate);\n    //For object\n    const newTask = new _TaskClass__WEBPACK_IMPORTED_MODULE_1__.default(title, desc, dueDate);\n    taskArr.push(newTask);\n    console.log(taskArr);\n    console.log(\"hehehehe\");\n    let form = document.querySelector(\".create-task\");\n    form.reset();\n}\n\n//# sourceURL=webpack://todolist/./src/index.js?");
 
 /***/ })
 
