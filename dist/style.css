@@ -65,15 +65,43 @@ body {
 
 
 /* Middle column styles */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
 .task {
     padding: 20px;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(233, 233, 233);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .task:hover {
-    cursor: pointer;
     background-color: rgb(232, 246, 255);
+}
+
+.taskTitle {
+    flex-grow: 1;
+}
+
+#trash {
+    color: #979797;
+    margin-left: 20px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+#trash:hover {
+    cursor: pointer;
+    color: #000000;
 }
 
 /* Right column styles*/
