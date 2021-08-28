@@ -3,8 +3,6 @@ export default class Task {
         this.title = title;
         this.desc = desc;
         this.dueDate = dueDate;
-
-        console.log(title);
     }
 
     getTitle() {
