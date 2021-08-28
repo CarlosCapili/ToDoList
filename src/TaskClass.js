@@ -3,6 +3,7 @@ export default class Task {
         this.title = title;
         this.desc = desc;
         this.dueDate = dueDate;
+        this.completed = false;
     }
 
     getTitle() {
@@ -24,5 +25,12 @@ export default class Task {
     }
     setDesc(newDesc) {
         this.desc = newDesc;
+    }
+
+    getCompleted() {
+        return this.completed;
+    }
+    toggleCompleted() {
+        this.completed = !this.completed;
     }
 }

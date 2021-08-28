@@ -92,6 +92,10 @@ input[type="checkbox"]:hover {
     flex-grow: 1;
 }
 
+.taskTitle:hover {
+    cursor: pointer;
+}
+
 #trash {
     color: #979797;
     margin-left: 20px;
