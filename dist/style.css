@@ -96,6 +96,11 @@ input[type="checkbox"]:hover {
     cursor: pointer;
 }
 
+.list {
+    height: 85.2vh;
+    overflow-y: auto;
+}
+
 #trash {
     color: #979797;
     margin-left: 20px;
