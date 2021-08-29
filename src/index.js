@@ -11,13 +11,14 @@ saveBtn.addEventListener("click", (e) => {
         if (taskIndex < 0) {
             collectFormData();
         } else {
-            alert("Task has been saved");
+            alert("Task updated and saved");
             editTaskInfo(taskIndex);
             updateTaskUI(taskIndex);
         }
+        let form = document.querySelector(".create-task");
+        form.reset();
     }
-    let form = document.querySelector(".create-task");
-    form.reset();
+
 });
 
 const list = document.querySelector(".list");
@@ -49,8 +50,9 @@ function handleTask(e) {
 
 function updateTaskUI(index) {
     let task = taskArr[index];
-    let dueDate = document.querySelector(".taskDate");
-    dueDate.textContent = task.getDueDate();
+    console.log(task.getTitle());
+    let taskDiv = document.getElementById(`${task.getTitle()}`).childNodes;
+    taskDiv[5].textContent = task.getDueDate();
 }
 
 function editTaskInfo(index) {
