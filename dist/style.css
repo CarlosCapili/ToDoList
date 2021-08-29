@@ -6,23 +6,20 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    height: 100vh;
 }
 
 /* Main styles */
 .content {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-}
-
-.page-main {
-    flex-grow: 1;
 }
 
 .row {
+    flex-grow: 1;  
     display: flex;
     flex-direction: row;
-    height: 100%;
 }
 
 .column {
@@ -37,6 +34,8 @@ body {
 #middle {
     background-color: #ffffff;
     max-width: 750px;
+    max-height: calc(100vh - 130px);
+    overflow-y: auto;
 }
 
 #right {
@@ -48,7 +47,6 @@ body {
     color: #ffffff;
     background-color: rgb(41, 144, 228);
     padding: 20px;
-    display: flex;
 }
 
 /* Left column styles */
@@ -74,14 +72,12 @@ input[type="checkbox"]:hover {
 }
 
 .task {
+    flex-grow: 1;
     padding: 20px;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid rgb(233, 233, 233);
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
 }
 
 .task:hover {
@@ -94,11 +90,6 @@ input[type="checkbox"]:hover {
 
 .taskTitle:hover {
     cursor: pointer;
-}
-
-.list {
-    height: 85.2vh;
-    overflow-y: auto;
 }
 
 #trash {

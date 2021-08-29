@@ -14,29 +14,23 @@
         <header class="page-header">
             <h2>TO-DO</h2>
         </header>
-        <div class="page-main">
-            <div class="row">
-                <div id="left" class="column">
-                    <div class="side-bar">
-                        <h3 id="task" class="item">Tasks</h3>
-                        <h3 id="notes" class="item">Notes</h3>
-                        <h3 id="projects" class="item">Projects</h3>
-                    </div>  
-                </div>
-                <div id="middle" class="column">
-                    <div class="list"></div>
-                </div>
-                <div id="right" class="column">
-                    <form class="create-task">
-                        <div>
-                            <p>Due Date:</p>
-                            <input id="date" type="date">
-                        </div>
-                        <input type="text" id="title" placeholder="Title" required>
-                        <textarea id="description" placeholder="Description"></textarea>
-                        <button type="button" id="save">Save</button>
-                    </form>
-                </div>
+        <div class="row">
+            <div id="left" class="column">
+                <h3 id="task" class="item">Tasks</h3>
+                <h3 id="notes" class="item">Notes</h3>
+                <h3 id="projects" class="item">Projects</h3>
+            </div>
+            <div id="middle" class="list column"></div>
+            <div id="right" class="column">
+                <form class="create-task">
+                    <div>
+                        <p>Due Date:</p>
+                        <input id="date" type="date">
+                    </div>
+                    <input type="text" id="title" placeholder="Title" required>
+                    <textarea id="description" placeholder="Description"></textarea>
+                    <button type="button" id="save">Save</button>
+                </form>
             </div>
         </div>
         <footer class="page-footer">
