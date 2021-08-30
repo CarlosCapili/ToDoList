@@ -26,20 +26,38 @@ body {
     flex:1;
 }
 
-#left {
-    background-color: rgb(233, 233, 233);
-    max-width: 180px;
+#top.column {
+    flex: 0;
 }
 
-#middle {
+#top {
+    background-color: rgb(233, 233, 233);
+    display: flex;
+    flex-direction: row;
+}
+
+#top > h3 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#bottom {
     background-color: #ffffff;
-    max-width: 750px;
-    max-height: calc(100vh - 130px);
+    max-width: 1000px;
+    max-height: calc(100vh - 180px);
     overflow-y: auto;
+    flex-grow: 1;
 }
 
 #right {
     background-color: rgb(233, 233, 233);
+}
+
+.taskDisplay {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    flex-grow: 1;
 }
 
 /* Header styles */
@@ -51,7 +69,7 @@ body {
 
 /* Left column styles */
 .item {
-    padding: 20px 30px;
+    padding: 15px 20px;
     font-weight: normal;
     font-size: 17px;
 }
@@ -78,6 +96,7 @@ input[type="checkbox"]:hover {
     border-bottom: 1px solid rgb(233, 233, 233);
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .task:hover {

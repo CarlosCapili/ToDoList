@@ -21,6 +21,14 @@ saveBtn.addEventListener("click", (e) => {
 
 });
 
+//Select Task, notes, or projects
+//Default should be tasks
+const taskBtn = document.getElementById("task");
+const notesBtn = document.getElementById("notes");
+const projBtn = document.getElementById("projects");
+
+
+
 const list = document.querySelector(".list");
 list.addEventListener("click", handleTask);
 
@@ -81,13 +89,17 @@ function collectFormData() {
     let title = document.querySelector("#title").value;
     let desc = document.querySelector("#description").value;
     let dueDate = document.querySelector("#date").value;
-    
-    //For DOM
-    createNewTask(title, desc, dueDate);
-    //For object
-    const newTask = new Task(title, desc, dueDate);
-    taskArr.push(newTask);
-    console.log(taskArr);
+    addTask(title, desc, dueDate);
+  
+}
+
+function addTask(title, desc, dueDate) {
+  //For DOM
+  createNewTask(title, desc, dueDate);
+  //For object
+  const newTask = new Task(title, desc, dueDate);
+  taskArr.push(newTask);
+  console.log(taskArr);
 }
 
 function deleteTask(e) {
@@ -124,3 +136,31 @@ function createNewTask(title, desc, dueDate) {
     task.innerHTML = layoutHTML;
     list.appendChild(task);  
 }
+
+function saveList() {
+    let tasks = [];
+
+    for (let i=0; i<taskArr.length; i++) {
+        let task = taskArr[0];
+        let taskInfo = {
+            "title": task.getTitle(),
+            "desc": task.getDesc(),
+            "date": task.getDueDate(),
+            "isDone": task.getCompleted()
+        };
+        tasks.push(taskInfo);
+    }
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function loadList() {
+    if (localStorage.getItem("tasks") != null) {
+        let tasks = JSON.parse(localStorage.getItem("tasks"));
+        for (let i=0; i<tasks.length; i++) {
+            let task = tasks[i];
+            addTask(task.title, task.desc, task.date, task.isDone);
+        }
+    }
+}
+
+loadList();
