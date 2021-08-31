@@ -26,38 +26,11 @@ body {
     flex:1;
 }
 
-#top.column {
-    flex: 0;
-}
-
-#top {
-    background-color: rgb(233, 233, 233);
-    display: flex;
-    flex-direction: row;
-}
-
-#top > h3 {
-    flex-grow: 1;
-    text-align: center;
-}
-
-#bottom {
+#middle {
     background-color: #ffffff;
-    max-width: 1000px;
-    max-height: calc(100vh - 180px);
+    max-width: 1300px;
+    max-height: calc(100vh - 128px);
     overflow-y: auto;
-    flex-grow: 1;
-}
-
-#right {
-    background-color: rgb(233, 233, 233);
-}
-
-.taskDisplay {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    flex-grow: 1;
 }
 
 /* Header styles */
@@ -68,10 +41,20 @@ body {
 }
 
 /* Left column styles */
+#left {
+    background-color: rgb(233, 233, 233);
+    max-width: 250px;
+}
+
+#left > * {
+    padding: 20px 30px;
+}
+
 .item {
-    padding: 15px 20px;
     font-weight: normal;
     font-size: 17px;
+    display: flex;
+    flex-direction: row;
 }
 
 .item:hover {
@@ -79,6 +62,17 @@ body {
     background-color: rgb(212, 212, 212);
 }
 
+.item > span {
+    width: 100%;
+}
+
+span.num {
+    text-align: right;
+}
+
+.active {
+    background-color: rgb(212, 212, 212);
+}
 
 /* Middle column styles */
 input[type="checkbox"] {
@@ -124,7 +118,16 @@ input[type="checkbox"]:hover {
 }
 
 /* Right column styles*/
+#right {
+    background-color: rgb(233, 233, 233);
+    flex-grow: 0.5;
+    display: flex;
+    flex-direction: column;
+}
+
 form {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     padding:0 1px;
 }
@@ -168,9 +171,29 @@ input[type="date"] {
     font-family: 'Montserrat', sans-serif;
 }
 
-.create-task {
+.add-option {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 1px;
+    background-color: #ffffff;
+}
+
+.option {
+    padding: 10px;
+    margin-bottom: 1px;
+    width: 100%;
+    text-align: center;
+}
+
+.option:hover {
+    cursor: pointer;
+    background-color: #e9e9e9;
+}
+
+.option.active {
+    background-color: #e9e9e9;
 }
 
 #title{

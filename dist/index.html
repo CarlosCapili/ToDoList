@@ -15,24 +15,19 @@
             <h2>TO-DO</h2>
         </header>
         <div class="row">
-            <div class="taskDisplay">
-                <div id="top" class="column">
-                    <h3 id="task" class="item">Tasks</h3>
-                    <h3 id="notes" class="item">Notes</h3>
-                    <h3 id="projects" class="item">Projects</h3>
-                </div>
-                <div id="bottom" class="list column"></div>
+            <div id="left" class="column">
+                <h3 id="home" class="item active">Home<span id="homeNum" class="num"></span></h3>
+                <h3 id="projects" class="item">Projects<span id="projNum" class="num"></span></h3>
+                <h3 id="notes" class="item">Notes<span id="noteNum" class="num"></span></h3>
             </div>
+            <div id="middle" class="list column"></div>
             <div id="right" class="column">
-                <form class="create-task">
-                    <div>
-                        <p>Due Date:</p>
-                        <input id="date" type="date">
-                    </div>
-                    <input type="text" id="title" placeholder="Title" required>
-                    <textarea id="description" placeholder="Description"></textarea>
-                    <button type="button" id="save">Save</button>
-                </form>
+                <div class="add-option">
+                    <div id="add-task" class="option active">Add task</div>
+                    <div id="add-proj" class="option">Add project</div>
+                    <div id="add-note" class="option">Add note</div>
+                </div>
+                <form class="create-task"></form>
             </div>
         </div>
         <footer class="page-footer">
